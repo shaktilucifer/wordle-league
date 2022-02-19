@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function LetterBlock() {
   return (
-    <div className="App">
-        
+    <div className="letter-block">
+        A
     </div>
   );
 }
