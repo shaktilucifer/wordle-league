@@ -1,15 +1,22 @@
 import { useCallback, useState } from "react";
 const wordLength = 5;
-export default function useWordChecker(wordChecked) {
-  const wordMatchingArray = new Array(wordLength).fill(0);
 
-  const checkWord = useCallback(
+export const enum LETTERSTATE {
+  MATCH = 0, UNMATCHED = -1, LOCATION_MATCH = 1
+}
+
+export default function useWordChecker(wordChecked) {
+  const wordMatchingArray = new Array(wordLength).fill(-1);
+  const wordSet = new Set<string>(wordChecked.split(''));
+  const getWordComparison = useCallback(
     (wordToCheck) => {
       for (let i = 0; i < wordLength; i++) {
         if (wordChecked[i] === wordToCheck[i]) {
-          wordMatchingArray[i] = 1;
-        } else if (false) {
-          // do something for if letter is present in word
+          wordMatchingArray[i] = LETTERSTATE.LOCATION_MATCH;
+        } else if (wordSet.has(wordToCheck[i])) {
+          wordMatchingArray[i] = LETTERSTATE.MATCH;
+        } else {
+          wordMatchingArray[i] = LETTERSTATE.UNMATCHED;
         }
       }
       return wordMatchingArray;
@@ -17,5 +24,5 @@ export default function useWordChecker(wordChecked) {
     [wordMatchingArray, wordChecked]
   );
 
-  return { checkWord };
+  return { getWordComparison };
 }

@@ -5,7 +5,7 @@ function LetterBlock() {
   return (
     <div className="letter-block">
         A
-    </div>
+     </div>
   );
 }
 
