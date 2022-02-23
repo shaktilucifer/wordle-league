@@ -1,16 +1,12 @@
 import { useCallback, useState } from "react";
-const wordLength = 5;
-
-export const enum LETTERSTATE {
-  MATCH = 0, UNMATCHED = -1, LOCATION_MATCH = 1
-}
+import { LETTERSTATE, WORDLENGTH } from "./appConstants";
 
 export default function useWordChecker(wordChecked) {
-  const wordMatchingArray = new Array(wordLength).fill(-1);
+  const wordMatchingArray = new Array(WORDLENGTH).fill(-1);
   const wordSet = new Set<string>(wordChecked.split(''));
   const getWordComparison = useCallback(
     (wordToCheck) => {
-      for (let i = 0; i < wordLength; i++) {
+      for (let i = 0; i < WORDLENGTH; i++) {
         if (wordChecked[i] === wordToCheck[i]) {
           wordMatchingArray[i] = LETTERSTATE.LOCATION_MATCH;
         } else if (wordSet.has(wordToCheck[i])) {
