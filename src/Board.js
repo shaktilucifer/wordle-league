@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import WordRow from './WordRow';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Board() {
+
+  const [word, setWord] = useState('tests');
 
   useEffect(() => {
     // set word here
