@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function LetterBlock() {
+export default function LetterBlock() {
   return (
     <div className="letter-block">
         A
