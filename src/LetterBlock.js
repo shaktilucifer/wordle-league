@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './LetterBlock.css';
 
 export default function LetterBlock() {
   return (
