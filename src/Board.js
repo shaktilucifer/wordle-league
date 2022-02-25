@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import WordRow from './WordRow';
 import { useEffect, useState } from 'react';
+import './Board.css';
 
 export default function Board() {
 
