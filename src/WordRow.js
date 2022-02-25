@@ -13,5 +13,3 @@ export default function WordRow() {
     </div>
   );
 }
-
-export default App;

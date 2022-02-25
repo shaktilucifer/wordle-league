@@ -8,5 +8,3 @@ export default function LetterBlock() {
      </div>
   );
 }
-
-export default App;

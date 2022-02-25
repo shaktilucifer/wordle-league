@@ -3,7 +3,7 @@ import './App.css';
 import WordRow from './WordRow';
 import { useEffect, useState } from 'react';
 
-function Board() {
+export default function Board() {
 
   const [word, setWord] = useState('tests');
 
@@ -21,5 +21,3 @@ function Board() {
     </div>
   );
 }
-
-export default App;
