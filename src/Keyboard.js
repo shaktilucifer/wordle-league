@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './LetterBlock.css';
+import './Keyboard.css';
 
-const KEYBOARD_VALUES = [[q,w,e,r,t,y,u,i,o,p], [a,s,d,f,g,h,j,k,l], [z,x,c,v,b,n,m]];
+const KEYBOARD_VALUES = [['q','w','e','r','t','y','u','i','o','p'], ['a','s','d','f','g','h','j','k','l'], ['Enter','z','x','c','v','b','n','m', '<<==']];
 
 export default function KeyBoard() {
   return (
@@ -9,7 +9,7 @@ export default function KeyBoard() {
       {KEYBOARD_VALUES.map((rowValues) => {
         return <div className='keyBoard__row'>
           {rowValues.map((letter) => {
-            <button>{letter}</button>
+            return <button className='keyBoard__button'>{letter}</button>
           })}
           </div>
       })}
