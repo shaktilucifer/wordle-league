@@ -5,6 +5,7 @@ import Board from './Board';
 function App() {
   return (
     <div className="App">
+        <header><strong>WORDLE LEAGUE</strong></header>
         <Board/>
     </div>
   );
