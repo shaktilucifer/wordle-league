@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import LetterBlock from './LetterBlock';
+import LetterBlock from './LetterBlock.tsx';
 
 export default function WordRow() {
   return (
