@@ -6,4 +6,4 @@ TODO:
 - ~~Add css for block~~
 - ~~Add css for block and letter~~
 - ~~Add keyboard for input~~
-- logic for keyboard input wrt the board. 
+- ~~logic for keyboard input wrt the board.~~ 
