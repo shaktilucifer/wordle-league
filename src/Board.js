@@ -4,9 +4,10 @@ import WordRow from './WordRow';
 import { useEffect, useState } from 'react';
 import './Board.css';
 
-export default function Board() {
+export default function Board({clickedLetter}) {
 
   const [word, setWord] = useState('tests');
+  const [currentRow, setCurrentRow] = useState(0);
 
   useEffect(() => {
     // set word here

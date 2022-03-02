@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
         <header><strong>WORDLE LEAGUE</strong></header>
-        <Board />
+        <Board clickedLetter={clickedLetter} />
         <KeyBoard onClickKey={onClickKey} />
     </div>
   );
