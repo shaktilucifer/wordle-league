@@ -15,11 +15,9 @@ export default function Board({clickedLetter}) {
 
   return (
     <div className="Board">
-        <WordRow />
-        <WordRow />
-        <WordRow />
-        <WordRow />
-        <WordRow />
+     { [1,2,3,4,5].map((index) => {
+        return <WordRow key={'row_'+index} />
+      })}
     </div>
   );
 }
