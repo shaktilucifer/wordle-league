@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './LetterBlock.css';
 
 export default function LetterBlock({letter=''}: LetterBlockProps) {
