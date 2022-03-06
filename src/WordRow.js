@@ -1,7 +1,7 @@
 import LetterBlock from './LetterBlock.tsx';
 import './WordRow.css';
 
-export default function WordRow({letterArray=['t','e','s','t','s']}) {
+export default function WordRow({letterArray}) {
 
   return (
     <div className="word-row">

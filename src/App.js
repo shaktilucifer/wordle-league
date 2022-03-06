@@ -9,6 +9,7 @@ function App() {
   const [currentWord, setCurrentWord] = useState('');
 
   const onClickKey = useCallback((clickedLetter) => {
+    console.log('do return and enter here');
     setClickedLetter(clickedLetter);
     if(currentWord.length < 5 {
        currentWord = currentWord + clickedLetter;
