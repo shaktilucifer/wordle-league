@@ -6,9 +6,13 @@ import { useCallback, useState } from 'react';
 
 function App() {
   const [clickedLetter, setClickedLetter] = useState('');
+  const [currentWord, setCurrentWord] = useState('');
 
   const onClickKey = useCallback((clickedLetter) => {
     setClickedLetter(clickedLetter);
+    if(currentWord.length < 5 {
+       currentWord = currentWord + clickedLetter;
+    })
   }, [setClickedLetter]);
 
   return (
