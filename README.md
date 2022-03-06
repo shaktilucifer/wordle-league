@@ -9,4 +9,4 @@ TODO:
 - ~~logic for keyboard input wrt the board.~~ 
 - ~~ Show each letter on the current selected row ~~
 -- Hmm seems to need something like context with all this prop passing through the children
--- Use some 
+-- Use some of the hooks to check the word
