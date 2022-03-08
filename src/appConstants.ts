@@ -3,3 +3,6 @@ export const enum LETTERSTATE {
 }
   
 export const WORDLENGTH = 5;
+
+export const ENTER_KEY = 'Enter';
+export const BACKSPACE = '<<==';
