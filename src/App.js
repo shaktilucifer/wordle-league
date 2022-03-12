@@ -3,11 +3,11 @@ import './App.css';
 import Board from './Board';
 import KeyBoard from './Keyboard';
 import { useCallback, useState } from 'react';
-import { BACKSPACE, ENTER_KEY } from './appConstants';
+import { BACKSPACE, ENTER_KEY } from './appConstants.ts';
 
 function App() {
   const [clickedLetter, setClickedLetter] = useState('');
-  const [currentWord, setCurrentWord] = useState('');
+  let [currentWord, setCurrentWord] = useState('');
 
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {

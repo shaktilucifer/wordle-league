@@ -16,7 +16,7 @@ export default function Board({clickedLetter, currentWord}) {
   return (
     <div className="Board">
      { [1,2,3,4,5].map((index) => {
-        return <WordRow key={'row_'+index} />
+        return <WordRow key={'row_'+index} letterArray={word.split('')} />
       })}
     </div>
   );
