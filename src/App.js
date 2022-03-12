@@ -8,12 +8,16 @@ import { BACKSPACE, ENTER_KEY } from './appConstants.ts';
 function App() {
   const [clickedLetter, setClickedLetter] = useState('');
   let [currentWord, setCurrentWord] = useState('');
-
+  const [currentRow, setCurrentRow] = useState(0);
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
+      setCurrentRow(currentRow < 5 ? currentRow + 1 : currentRow);
       //check word against the answer
+      return;
     } else if (clickedLetter === BACKSPACE) {
-      // remove one letter 
+      currentWord = currentWord.substring(0, currentWord.length - 1);
+      setCurrentWord(currentWord);
+      return;
     }
 
     setClickedLetter(clickedLetter);
@@ -26,7 +30,7 @@ function App() {
   return (
     <div className="App">
         <header><strong>WORDLE LEAGUE</strong></header>
-        <Board clickedLetter={clickedLetter} currentWord={currentWord} />
+        <Board clickedLetter={clickedLetter} currentWord={currentWord} currentRow={currentRow} />
         <KeyBoard onClickKey={onClickKey} />
     </div>
   );
