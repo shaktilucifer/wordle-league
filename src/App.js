@@ -15,16 +15,18 @@ function App() {
     } else if (clickedLetter === BACKSPACE) {
       // remove one letter 
     }
+
     setClickedLetter(clickedLetter);
     if(currentWord.length < 5) {
        currentWord = currentWord + clickedLetter;
+       setCurrentWord(currentWord);
     }
   }, [setClickedLetter]);
 
   return (
     <div className="App">
         <header><strong>WORDLE LEAGUE</strong></header>
-        <Board clickedLetter={clickedLetter} />
+        <Board clickedLetter={clickedLetter} currentWord={currentWord} />
         <KeyBoard onClickKey={onClickKey} />
     </div>
   );

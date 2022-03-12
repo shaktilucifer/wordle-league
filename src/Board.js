@@ -10,13 +10,14 @@ export default function Board({clickedLetter, currentWord}) {
   const [currentRow, setCurrentRow] = useState(0);
 
   useEffect(() => {
+    console.log(currentWord);
     // set word here
   })
 
   return (
     <div className="Board">
      { [1,2,3,4,5].map((index) => {
-        return <WordRow key={'row_'+index} letterArray={word.split('')} />
+        return <WordRow key={'row_'+index} letterArray={currentWord.split('')} />
       })}
     </div>
   );

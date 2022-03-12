@@ -5,8 +5,8 @@ export default function WordRow({letterArray}) {
 
   return (
     <div className="word-row">
-        {letterArray.map((letter) => {
-          return <LetterBlock letter={letter} />        
+        {[0, 1, 2, 3, 4].map((val) => {
+          return <LetterBlock letter={letterArray[val]} />        
         })}
     </div>
   );
