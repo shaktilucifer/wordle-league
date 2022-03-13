@@ -9,9 +9,11 @@ function App() {
   const [clickedLetter, setClickedLetter] = useState('');
   let [currentWord, setCurrentWord] = useState('');
   const [currentRow, setCurrentRow] = useState(0);
+
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
-      setCurrentRow(currentRow < 5 ? currentRow + 1 : currentRow);
+      console.log('enter', currentRow);
+      setCurrentRow(prevRow => prevRow < 5 ? prevRow+1 : prevRow);
       //check word against the answer
       return;
     } else if (clickedLetter === BACKSPACE) {

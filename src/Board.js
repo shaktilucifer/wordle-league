@@ -6,7 +6,7 @@ import './Board.css';
 
 export default function Board({clickedLetter, currentWord, currentRow}) {
 
-  const [word, setWord] = useState('tests');
+  const [word, setWord] = useState('');
 
   useEffect(() => {
     console.log(currentWord);
