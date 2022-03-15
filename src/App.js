@@ -8,11 +8,13 @@ import { BACKSPACE, ENTER_KEY } from './appConstants.ts';
 function App() {
   const [clickedLetter, setClickedLetter] = useState('');
   let [currentWord, setCurrentWord] = useState('');
+  const wordMap = {};
   const [currentRow, setCurrentRow] = useState(0);
 
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
       console.log('enter', currentRow);
+      wordMap[currentRow] = currentWord;
       setCurrentRow(prevRow => prevRow < 5 ? prevRow+1 : prevRow);
       //check word against the answer
       return;
@@ -32,7 +34,7 @@ function App() {
   return (
     <div className="App">
         <header><strong>WORDLE LEAGUE</strong></header>
-        <Board clickedLetter={clickedLetter} currentWord={currentWord} currentRow={currentRow} />
+        <Board wordMap={wordMap} clickedLetter={clickedLetter} currentWord={currentWord} currentRow={currentRow} />
         <KeyBoard onClickKey={onClickKey} />
     </div>
   );

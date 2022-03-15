@@ -4,7 +4,7 @@ import WordRow from './WordRow';
 import { useEffect, useState } from 'react';
 import './Board.css';
 
-export default function Board({clickedLetter, currentWord, currentRow}) {
+export default function Board({wordMap, clickedLetter, currentWord, currentRow}) {
 
   const [word, setWord] = useState('');
 
@@ -17,7 +17,8 @@ export default function Board({clickedLetter, currentWord, currentRow}) {
   return (
     <div className="Board">
      { [0, 1, 2, 3, 4].map((index) => {
-        return <WordRow key={'row_'+index} letterArray={currentRow === index ? currentWord.split(''): []} />
+        return <WordRow key={'row_'+index} 
+        letterArray={currentRow === index ? currentWord.split('') : wordMap[index] ? wordMap[index].split('') : []} />
       })}
     </div>
   );
