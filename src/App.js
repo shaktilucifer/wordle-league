@@ -14,8 +14,12 @@ function App() {
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
       console.log('enter', currentRow);
-      wordMap[currentRow] = currentWord;
-      setCurrentRow(prevRow => prevRow < 5 ? prevRow+1 : prevRow);
+      setCurrentRow(prevRow => {
+        wordMap[currentRow] = currentWord;
+        setCurrentWord('');
+        console.log(wordMap);
+        return prevRow < 5 ? prevRow+1 : prevRow
+      });
       //check word against the answer
       return;
     } else if (clickedLetter === BACKSPACE) {
@@ -29,7 +33,7 @@ function App() {
        currentWord = currentWord + clickedLetter;
        setCurrentWord(currentWord);
     }
-  }, [setClickedLetter]);
+  }, [setClickedLetter, setCurrentRow]);
 
   return (
     <div className="App">
