@@ -11,4 +11,4 @@ TODO:
 - ~~ Add conditions for return enter and~~
 - then win condition check
 -- word comparison with correct word
--- Add a map for word to row storagel
+-- make word map work
