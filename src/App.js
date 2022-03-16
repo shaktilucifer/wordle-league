@@ -13,7 +13,7 @@ function App() {
 
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
-      console.log('enter', currentRow);
+
       setCurrentRow(prevRow => {
         wordMap[currentRow] = currentWord;
         setCurrentWord('');
@@ -28,7 +28,6 @@ function App() {
       return;
     }
 
-    console.log('cliked letter');
     setClickedLetter(clickedLetter);
     if(currentWord.length < 5) {
        currentWord = currentWord + clickedLetter;
