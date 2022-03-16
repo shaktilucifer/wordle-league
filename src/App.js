@@ -18,7 +18,7 @@ function App() {
         wordMap[currentRow] = currentWord;
         setCurrentWord('');
         console.log(wordMap);
-        return prevRow < 5 ? prevRow+1 : prevRow
+        return prevRow < 5 ? prevRow + 1 : prevRow
       });
       //check word against the answer
       return;
@@ -28,9 +28,11 @@ function App() {
       return;
     }
 
+    console.log('cliked letter');
     setClickedLetter(clickedLetter);
     if(currentWord.length < 5) {
        currentWord = currentWord + clickedLetter;
+       console.log(currentWord);
        setCurrentWord(currentWord);
     }
   }, [setClickedLetter, setCurrentRow]);
