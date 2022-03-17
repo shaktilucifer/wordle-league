@@ -11,6 +11,10 @@ function App() {
   const wordMap = {};
   const [currentRow, setCurrentRow] = useState(0);
 
+  const checkAnswer = () => {
+
+  }
+
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
 
@@ -20,7 +24,7 @@ function App() {
         console.log(wordMap);
         return prevRow < 5 ? prevRow + 1 : prevRow
       });
-      //check word against the answer
+      checkAnswer();
       return;
     } else if (clickedLetter === BACKSPACE) {
       currentWord = currentWord.substring(0, currentWord.length - 1);
