@@ -12,3 +12,4 @@ TODO:
 - then win condition check
 -- word comparison with correct word
 -- make word map work
+-- think of ideas for mapping color to word match
