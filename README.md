@@ -9,7 +9,8 @@ TODO:
 - ~~logic for keyboard input wrt the board.~~ 
 - ~~ Show each letter on the current selected row ~~
 - ~~ Add conditions for return enter and~~
-- then win condition check
 -- word comparison with correct word
 -- make word map work
 -- think of ideas for mapping color to word match
+- then win condition check
+- check partial conditions per row
