@@ -21,7 +21,6 @@ function App() {
       setCurrentRow(prevRow => {
         wordMap[currentRow] = currentWord;
         setCurrentWord('');
-        console.log(wordMap);
         return prevRow < 5 ? prevRow + 1 : prevRow
       });
       checkAnswer();
@@ -35,7 +34,6 @@ function App() {
     setClickedLetter(clickedLetter);
     if(currentWord.length < 5) {
        currentWord = currentWord + clickedLetter;
-       console.log(currentWord);
        setCurrentWord(currentWord);
     }
   }, [setClickedLetter, setCurrentRow]);

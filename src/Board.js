@@ -7,13 +7,7 @@ import './Board.css';
 export default function Board({wordMap, clickedLetter, currentWord, currentRow}) {
 
   const [word, setWord] = useState('');
-  console.log(currentRow);
-  useEffect(() => {
-    console.log(currentWord);
-
-    // set word here
-  })
-
+  
   return (
     <div className="Board">
      { [...Array(5)].map((index) => {
