@@ -17,7 +17,6 @@ function App() {
 
   const onClickKey = useCallback((clickedLetter) => {
     if(clickedLetter === ENTER_KEY) {
-
       setCurrentRow(prevRow => {
         wordMap[currentRow] = currentWord;
         setCurrentWord('');
