@@ -14,3 +14,7 @@ TODO:
 -- think of ideas for mapping color to word match
 - then win condition check
 - check partial conditions per row
+
+worklog:
+- animations for square turning
+- use context instead of passing word and letter 
